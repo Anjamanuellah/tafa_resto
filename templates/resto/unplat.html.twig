@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+	{{ encore_entry_link_tags('plat') }}
+{% endblock %}
+
+{% block title %}Hello RestoController!
+{% endblock %}
+
+
+{% block body %}
+	<div class="container">
+		<div class="titre">
+			<h1>CONFIRMATION DE VOTRE COMMANDE</h1>
+		</div>
+		<div class="card bg-dark text-white">
+
+			<img src="{{ plat.image}}" class="img-fluid" alt=""/>
+
+			<div class="mask" style="background-color: rgba(0, 0, 0, 0.4);">
+      			<p class="card-img-overlay text-white mt-0">
+					{{ plat.Nom }} <br>
+					{{ plat.description }} <br>
+					{{ plat.ingredient }} <br>
+					{{ plat.prix }} 
+				</p>
+				<div class="button d-flex ">
+					<a href="{{ path('app_commande_show', {'id': plat.id}) }}" class="btn btn-primary">Ajouter dans votre panier</a>
+					<button class="btn btn-warning">Voir le menu</button>
+				</div>
+			</div>
+		</div>
+    </div>
+
+{% endblock %}

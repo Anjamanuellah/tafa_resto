@@ -1,0 +1,66 @@
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~bootswatch/dist/lux/bootstrap.min.css";
+@import "~mdb.min.css";
+
+body {
+    background-color:white;
+    width: 100%;
+    margin: auto;
+}
+.acceuil{
+    background-image: url("https://images.pexels.com/photos/326278/pexels-photo-326278.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+}
+@media screen and (min-width: 992px) {
+    .acceuil {
+      height: 500px;
+      background-size: cover;
+      justify-content: center;
+    }
+}
+h2{
+    margin-top: 2rem;
+    color: black;
+}
+.text{
+    color: aliceblue;
+    width: 50%;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.titre{
+    text-align: center;
+    color: azure;
+    width: 100%;
+}
+.carte{
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    margin-left: 2rem;
+}
+.card{
+    justify-content: center;
+    margin-top: 2rem;
+}
+.card img{
+    height: 15rem;
+}
+.footer{
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+    color: aliceblue;
+}
+.instagram{
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+footer{
+    margin-top: 2rem;
+    text-align: center;
+    color: black;
+    background-color: grey;
+}

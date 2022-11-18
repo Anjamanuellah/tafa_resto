@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Plat
+{% endblock %}
+
+{% block body %}
+		<div class="container">
+
+			<h1 class="text-danger">Votre commande est :</h1>
+
+			<div class="table-responsive-md">
+				<table class="table">
+					{{ form_start(form) }}
+					<thead>
+						<th scope="col"></th>
+						<th scope="col">Nom du plat</th>
+						<th scope="col">Quantité</th>
+						<th scope="col">Prix unitaire (Ariary)</th>
+						<th scope="col">Prix Total</th>
+					</thead>
+					<tbody>
+						<td>
+							<img src="{{ asset(plat.image) }}" class="w-50 h-50 img-fluid"/>
+						</td>
+						<td>{{plat.nom }}</td>
+						<td>
+
+							{{ form_widget(form ) }}
+
+						</td>
+						<td>{{plat.prix}}</td>
+						<td>_ _</td>
+					</tbody>
+
+					<tfoot>
+
+						<td>
+							<button class="btn btn-success" type="submit">valider</button>
+                        </td>
+					</tfoot>
+				</table>
+				{{ form_end(form) }}
+			</div>
+		</div>
+{% endblock %}
